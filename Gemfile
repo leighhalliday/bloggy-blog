@@ -34,6 +34,7 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'aws-sdk', '< 2.0'
+  gem 'fog-aws', '~> 0.7.6'
 end
 
 gem 'active_model_serializers', git: "https://github.com/rails-api/active_model_serializers.git"
