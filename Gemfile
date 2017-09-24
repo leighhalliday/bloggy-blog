@@ -28,6 +28,7 @@ end
 group :production do
   gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
   gem 'fog-aws', '~> 1.4', '>= 1.4.1'
+  gem 'raygun4ruby'
 end
 
 gem 'active_model_serializers', '~> 0.10.6'
