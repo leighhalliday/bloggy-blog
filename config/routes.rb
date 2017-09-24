@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  end
+  post "/graphql", to: "graphql#execute"
+  
   root 'pages#home'
   resources :posts, only: [:index]
   resources :categories, only: [:index, :show] do
@@ -22,8 +27,6 @@ Rails.application.routes.draw do
     resources :settings, only: [:index, :edit, :update]
     mount Idioma::Engine => "/idioma"
   end
-
-  
 
   get "/:id", to: "posts#show", as: :post
   get '/posts/:id', to: redirect('/%{id}')
