@@ -11,10 +11,6 @@ gem 'uglifier', '~> 2.7.2'
 gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
 # Use jQuery as the JavaScript library
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# For dealing with some jquery/turbolinks weirdness
-gem 'jquery-turbolinks', '~> 2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
@@ -44,7 +40,6 @@ gem 'haml-rails',               '~> 1.0'
 gem 'pg',                       '~> 0.18.3'
 gem 'sorcery',                  '~> 0.11.0'
 gem 'font-awesome-rails',       '~> 4.7', '>= 4.7.0.2'
-gem 'nprogress-rails',          '~> 0.1.6' # turbolinks progress bar
 gem 'ransack',                  '~> 1.8', '>= 1.8.3'
 gem 'will_paginate',            '~> 3.1', '>= 3.1.6'
 gem 'will-paginate-i18n',       '~> 0.1.15'

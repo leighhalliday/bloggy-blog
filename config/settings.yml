@@ -95,3 +95,11 @@
     description: "A comma separated list of available languages."
     default: "en"
     translatable: false
+  -
+    section: "i18n"
+    key: "i18n_activated"
+    name: "I18n Activated"
+    data_type: "boolean"
+    description: "Whether or not I18n is enabled on website."
+    default: false
+    translatable: false
