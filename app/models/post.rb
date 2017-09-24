@@ -15,7 +15,7 @@ class Post < ApplicationRecord
 
   # == Validations ==========================================================
 
-  validates :title, :body, presence: true
+  validates :title, :body, :slug, presence: true
   validates :category_id, :user_id, presence: true, unless: :is_static?
 
   # == Scopes ===============================================================
@@ -35,7 +35,7 @@ class Post < ApplicationRecord
   # == Instance Methods =====================================================
 
   def to_param
-    self.slug.present? ? self.slug : [self.id, self.title.to_s.parameterize].join("-")
+    slug
   end
 
   def other_posts(limit: 6)
