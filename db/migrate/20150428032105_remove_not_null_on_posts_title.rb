@@ -1,4 +1,4 @@
-class RemoveNotNullOnPostsTitle < ActiveRecord::Migration
+class RemoveNotNullOnPostsTitle < ActiveRecord::Migration[4.2]
   def up
     change_column :posts, :title, :string, null: true
     change_column :posts, :body, :text, null: true

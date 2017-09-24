@@ -1,4 +1,4 @@
-class CreateInitialTranslationTables < ActiveRecord::Migration
+class CreateInitialTranslationTables < ActiveRecord::Migration[4.2]
   def up
     if Post.respond_to?("create_translation_table!")
       Post.create_translation_table!({

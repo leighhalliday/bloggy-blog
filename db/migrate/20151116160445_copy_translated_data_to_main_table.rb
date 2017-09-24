@@ -1,4 +1,4 @@
-class CopyTranslatedDataToMainTable < ActiveRecord::Migration
+class CopyTranslatedDataToMainTable < ActiveRecord::Migration[4.2]
   def up
     Category.drop_translation_table! migrate_data: true if Category.respond_to?("drop_translation_table!")
     Post.drop_translation_table! migrate_data: true if Post.respond_to?("drop_translation_table!")

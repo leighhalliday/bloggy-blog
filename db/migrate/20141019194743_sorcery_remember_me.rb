@@ -1,4 +1,4 @@
-class SorceryRememberMe < ActiveRecord::Migration
+class SorceryRememberMe < ActiveRecord::Migration[4.2]
   def change
     add_column :users, :crypted_password, :string, :null => false
     add_column :users, :salt, :string, :null => false

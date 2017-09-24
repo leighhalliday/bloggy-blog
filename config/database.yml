@@ -7,8 +7,8 @@ default: &default
 development:
   <<: *default
   encoding: unicode
-  database: paisita
-  username: lhalliday
+  database: monastery
+  username: leighhalliday
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -17,13 +17,13 @@ development:
 test:
   <<: *default
   encoding: unicode
-  database: paisita_test
-  username: lhalliday
+  database: monastery_test
+  username: leighhalliday
   password:
 
 production:
   <<: *default
   encoding: unicode
-  database: paisita
-  username: lhalliday
+  database: monastery
+  username: leighhalliday
   password:

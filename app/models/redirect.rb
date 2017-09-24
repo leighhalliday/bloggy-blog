@@ -1,4 +1,4 @@
-class Redirect < ActiveRecord::Base
+class Redirect < ApplicationRecord
 
   # == Constants ============================================================
 

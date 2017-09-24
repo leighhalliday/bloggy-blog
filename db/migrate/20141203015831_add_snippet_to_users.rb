@@ -1,4 +1,4 @@
-class AddSnippetToUsers < ActiveRecord::Migration
+class AddSnippetToUsers < ActiveRecord::Migration[4.2]
   def up
     add_column :users, :snippet, :text
     if User.respond_to?("create_translation_table!")
