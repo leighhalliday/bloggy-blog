@@ -23,6 +23,8 @@ Rails.application.routes.draw do
     mount Idioma::Engine => "/idioma"
   end
 
+  
+
   get "/:id", to: "posts#show", as: :post
   get '/posts/:id', to: redirect('/%{id}')
 end
