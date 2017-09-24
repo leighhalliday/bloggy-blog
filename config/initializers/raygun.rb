@@ -1,6 +1,6 @@
 if Rails.env.production?
   Raygun.setup do |config|
-    config.api_key = ENV.fetch('RAYGUM_APIKEY')
+    config.api_key = ENV.fetch('RAYGUN_APIKEY')
     config.filter_parameters = Rails.application.config.filter_parameters
 
     # The default is Rails.env.production?
