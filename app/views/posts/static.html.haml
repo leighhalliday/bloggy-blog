@@ -19,6 +19,6 @@
       - if @post.subtitle.present?
         %p.subtitle= @post.subtitle
 
-      ~ parse_body(@post.body)
+      ~ @post.parsed_body
 
       = render partial: "common/footer"

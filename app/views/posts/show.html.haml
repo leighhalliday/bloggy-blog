@@ -27,7 +27,7 @@
       - if @post.subtitle.present?
         %p.subtitle= @post.subtitle
 
-      ~ parse_body(@post.body)
+      ~ @post.parsed_body
 
       - if @post.source_url.present?
         %p

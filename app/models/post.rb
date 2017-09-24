@@ -42,4 +42,8 @@ class Post < ApplicationRecord
     self.class.where("id != ?", id).listed_posts.limit(limit)
   end
 
+  def parsed_body
+    GitHub::Markdown.render_gfm(body).html_safe
+  end
+
 end

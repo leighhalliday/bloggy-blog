@@ -22,6 +22,7 @@ group :test do
 end
 
 group :development do
+  gem 'graphiql-rails'
 end
 
 group :production do
@@ -50,5 +51,3 @@ gem 'sitemap_generator',        '~> 5.1.0'
 gem 'redis',                    '~> 4.0'
 gem 'idioma',                   '~> 0.2.0'
 gem 'graphql',                  '~> 1.7', '>= 1.7.3'
-
-gem 'graphiql-rails', group: :development
