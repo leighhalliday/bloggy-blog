@@ -40,10 +40,4 @@ Types::PostType = GraphQL::ObjectType.define do
       obj.category
     }
   end
-
-  field :other_posts, !types[!Types::PostType] do
-    resolve -> (obj, args, ctx) {
-      obj.other_posts
-    }
-  end
 end
