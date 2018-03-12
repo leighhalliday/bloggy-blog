@@ -1,14 +1,11 @@
 {
-  "name": "Monastery",
-  "version": "1.0.0",
+  "name": "leighs-blog",
+  "version": "1.0.1",
   "dependencies": {
-    "bower": "~1.3"
+    "@rails/webpacker": "^3.3.0"
   },
   "engine": {
-    "node": "0.10.x",
-    "npm": "1.3.x"
-  },
-  "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "node": "9.5.x",
+    "npm": "5.6.x"
   }
 }

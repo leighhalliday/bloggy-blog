@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.4.1"
+ruby "2.5.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1', '>= 5.1.4'
@@ -51,3 +51,4 @@ gem 'sitemap_generator',        '~> 5.1.0'
 gem 'redis',                    '~> 3.3.3'
 gem 'idioma',                   '~> 0.2.0'
 gem 'graphql',                  '~> 1.7', '>= 1.7.3'
+gem 'webpacker',                '~> 3.3'

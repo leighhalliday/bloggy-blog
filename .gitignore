@@ -21,4 +21,8 @@
 
 .DS_Store
 
-vendor/assets/components
+vendor/assets/components/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
