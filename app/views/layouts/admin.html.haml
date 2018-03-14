@@ -4,6 +4,7 @@
     %title= t('admin.title')
     = stylesheet_link_tag 'admin', media: 'all'
     = javascript_include_tag 'admin'
+    = javascript_pack_tag 'hello-world-bundle'
     = csrf_meta_tags
 
   %body
@@ -14,5 +15,3 @@
       #page-wrapper
         .container-fluid
           = yield
-
-    = render partial: "layouts/common/footer"

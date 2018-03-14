@@ -20,11 +20,3 @@
 //= require codemirror/modes/css
 //= require codemirror/modes/htmlmixed
 //= require_tree ./admin
-
-// Bower Components
-//= require angular/angular
-//= require ng-file-upload/angular-file-upload
-
-NProgress.configure({
-  showSpinner: false
-});

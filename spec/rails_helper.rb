@@ -22,9 +22,13 @@ require 'rspec/rails'
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
-ActiveRecord::Migration[4.2].maintain_test_schema!
+ActiveRecord::Migration[5.1].maintain_test_schema!
 
 RSpec.configure do |config|
+  # Ensure that if we are running js tests, we are using latest webpack assets
+  # This will use the defaults of :js and :server_rendering meta tags
+  ReactOnRails::TestHelper.configure_rspec_to_compile_assets(config)
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

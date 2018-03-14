@@ -1,8 +1,17 @@
 {
   "name": "leighs-blog",
   "version": "1.0.1",
+  "license": "BSD-3-Clause",
   "dependencies": {
-    "@rails/webpacker": "^3.3.0"
+    "@rails/webpacker": "^3.3.0",
+    "axios": "^0.18.0",
+    "babel-preset-react": "^6.24.1",
+    "mobx": "^4.0.1",
+    "mobx-react": "^5.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-on-rails": "^10.1.3"
   },
   "engine": {
     "node": "9.5.x",

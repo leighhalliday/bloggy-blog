@@ -53,3 +53,5 @@ gem 'idioma',                   '~> 0.2.0'
 gem 'graphql',                  '~> 1.7', '>= 1.7.3'
 gem 'webpacker',                '~> 3.3'
 gem 'react_on_rails',           '10.1.3'
+
+gem 'mini_racer', platforms: :ruby
