@@ -26,7 +26,7 @@ group :development do
 end
 
 group :production do
-  gem 'aws-sdk', '~> 2.3.0'
+  gem 'aws-sdk-s3', '~> 1.8', '>= 1.8.2'
   gem 'raygun4ruby'
 end
 
