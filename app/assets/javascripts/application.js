@@ -16,7 +16,6 @@
 //= require bigslide
 //= require fastclick.min
 //= require modernizr.custom.min
-//= require retina.min.js
 //= require_tree ./main
 
 $(document).ready(function() {

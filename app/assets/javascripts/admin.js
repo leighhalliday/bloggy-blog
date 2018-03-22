@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require marked.min
-//= require vue.min
 //= require codemirror
 //= require codemirror/modes/xml
 //= require codemirror/modes/css
