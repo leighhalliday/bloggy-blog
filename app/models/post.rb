@@ -43,10 +43,9 @@ class Post < ApplicationRecord
   end
 
   def parsed_body
-    # GitHub::Markdown.render_gfm(body).html_safe
     renderer = Redcarpet::Render::HTML.new
     redcarpet = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
-    redcarpet.render(body).html_safe
+    redcarpet.render(body.to_s).html_safe
   end
 
 end
