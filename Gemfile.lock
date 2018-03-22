@@ -128,7 +128,7 @@ GEM
     jsonapi-renderer (0.2.0)
     jwt (1.5.6)
     libv8 (6.3.292.48.1)
-    loofah (2.2.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -156,7 +156,7 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
-    paperclip (5.3.0)
+    paperclip (6.0.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
       mime-types
@@ -196,7 +196,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.2.2)
       rake
-    rake (12.3.0)
+    rake (12.3.1)
     ransack (1.8.8)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
@@ -309,7 +309,7 @@ DEPENDENCIES
   jquery-rails (~> 4.3, >= 4.3.1)
   mini_racer
   nokogiri (~> 1.8, >= 1.8.1)
-  paperclip (~> 5.1)
+  paperclip (~> 6.0)
   pg (~> 0.21.0)
   rails (~> 5.1, >= 5.1.4)
   ransack (~> 1.8, >= 1.8.3)
