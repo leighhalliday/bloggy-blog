@@ -45,7 +45,6 @@ class Post < ApplicationRecord
   def parsed_body
     renderer = Redcarpet::Render::HTML.new
     redcarpet = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
-    redcarpet.render(body.to_s).html_safe
+    redcarpet.render(body).html_safe
   end
-
 end
