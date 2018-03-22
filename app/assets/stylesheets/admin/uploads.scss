@@ -1,4 +1,10 @@
 .gallery {
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+
   .navigation {
     margin-bottom: 15px;
   }
@@ -21,10 +27,9 @@
   }
 
   img.selected {
-    max-height: 125px;
-    max-width: 125px;
-    margin: 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    border: 2px red solid;
+    &:hover {
+      border: 2px red solid;
+    }
   }
 }

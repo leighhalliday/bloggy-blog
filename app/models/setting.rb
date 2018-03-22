@@ -21,8 +21,17 @@ class Setting < ApplicationRecord
 
   # == Class Methods ========================================================
 
+  def self.load(key)
+    @@settings ||= {}
+    return @@settings[key] if @@settings[key].present?
+    Setting.all.each do |setting|
+      @@settings[setting.key.to_sym] = setting
+    end
+    @@settings[key]
+  end
+
   def self.get(key)
-    setting = self.by_key(key).first
+    setting = load(key)
     return case
       when setting.nil?
         Settings::Manager.load_default(key)
