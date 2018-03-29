@@ -12,6 +12,9 @@
   %meta{property: "og:image", content: @post.upload.file.url(:wide_1440)}
   %meta{property: "og:type", content: "website"}
 
+  - if @post.noindex?
+    %meta{name: 'robots', content: 'noindex'}
+
 %main.container
   .row
     .col-xs-12.single-content
@@ -45,9 +48,14 @@
 
       .col-xs-12.col-sm-6
         .category-list
-          %p
-            Published
-            %span= @post.published_at.to_s
+          - if @post.is_published?
+            %p
+              Published
+              %span= l @post.published_at.to_date, format: :long
+          - if @post.last_modified_at.present? && @post.published_at < @post.last_modified_at
+            %p
+              Last updated:
+              %span= l @post.last_modified_at.to_date, format: :long
           %p
             = @post.user.name
             = t('in_category', category: link_to(@post.category.name, category_path(@post.category))).html_safe

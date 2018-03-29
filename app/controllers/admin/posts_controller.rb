@@ -76,17 +76,15 @@ class Admin::PostsController < Admin::BaseController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_admin_post
       @post = Post.where(slug: params[:id]).first || Post.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def admin_post_params
       params.require(:post).permit(
         :slug, :title, :subtitle, :body, :user_id, :category_id, :is_static,
         :source_url, :source_name, :seo_description, :published,
-        :upload_id, :summary, :is_listed, :seo_tags
+        :upload_id, :summary, :is_listed, :seo_tags, :noindex, :update_last_modified
       )
     end
 end

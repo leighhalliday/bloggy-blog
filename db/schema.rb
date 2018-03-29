@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116160445) do
+ActiveRecord::Schema.define(version: 20180329195347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 20151116160445) do
     t.text "summary"
     t.boolean "is_listed", default: true, null: false
     t.string "seo_tags"
+    t.boolean "noindex", default: false, null: false
+    t.datetime "last_modified_at"
   end
 
   create_table "redirects", id: :serial, force: :cascade do |t|

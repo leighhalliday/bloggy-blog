@@ -12,11 +12,14 @@
           .col-lg-6
             = f.input :is_static, as: :boolean, wrapper: :inline_checkbox, label: t('admin.post.is_static')
             = f.input :published, as: :boolean, wrapper: :inline_checkbox, label: t('admin.post.is_published')
+            = f.input :update_last_modified, as: :boolean, wrapper: :inline_checkbox, label: "Update last modified?"
+            = f.input :is_listed, as: :boolean, wrapper: :inline_checkbox, label: t('admin.post.is_listed')
+            = f.input :noindex, as: :boolean, wrapper: :inline_checkbox, label: "No Index?"
           .col-lg-6
             .category
               = f.input :user_id, collection: User.for_select, label: t('admin.post.author')
               = f.input :category_id, collection: Category.for_select, label: t('admin.post.category')
-            = f.input :is_listed, as: :boolean, wrapper: :inline_checkbox, label: t('admin.post.is_listed')
+
         .row
           .col-lg-12
             = f.input :slug, label: t('admin.post.slug')

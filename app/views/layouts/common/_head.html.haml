@@ -11,26 +11,9 @@
 
   %meta{property: "og:locale", content: 'en_US'}/
 
-  %link{rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"}
-  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"}
-
   = stylesheet_link_tag 'main', media: 'all'
-  = javascript_include_tag 'application'
+  = stylesheet_pack_tag 'application'
 
   = csrf_meta_tags
 
   = Setting.get(:header_code).to_s.html_safe
-
-  - heading_font = Setting.get(:heading_font)
-  - if heading_font.present?
-    :css
-      h1,h2,h3,h4,h5,h6,p.subtitle {
-        font-family: "#{heading_font}", "Source Sans Pro", sans-serif !important;
-      }
-
-  - body_font = Setting.get(:body_font)
-  - if body_font.present?
-    :css
-      p {
-        font-family: "#{body_font}", "Droid Serif", serif !important;
-      }

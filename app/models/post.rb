@@ -4,9 +4,12 @@ class Post < ApplicationRecord
 
   # == Attributes ===========================================================
 
+  attr_accessor :update_last_modified
+
   # == Extensions ===========================================================
 
   date_flag :published_at
+
   # == Relationships ========================================================
 
   belongs_to :user
@@ -30,6 +33,8 @@ class Post < ApplicationRecord
 
   # == Callbacks ============================================================
 
+  before_validation :check_update_last_modified
+
   # == Class Methods ========================================================
 
   # == Instance Methods =====================================================
@@ -46,5 +51,13 @@ class Post < ApplicationRecord
     renderer = Redcarpet::Render::HTML.new
     redcarpet = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true)
     redcarpet.render(body).html_safe
+  end
+
+  private
+
+  def check_update_last_modified
+    if update_last_modified == '1'
+      self.last_modified_at = Time.zone.now
+    end
   end
 end

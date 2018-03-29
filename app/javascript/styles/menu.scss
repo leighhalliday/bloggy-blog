@@ -1,0 +1,20 @@
+nav#menu {
+  width: 32em;
+  height: 100vh;
+  position: fixed;
+  left: -32em;
+  transition: left 0.3s ease-in-out;
+
+  &.open {
+    left: 0px;
+  }
+}
+
+.menu-trigger {
+  position: fixed;
+  transition: left 0.3s ease-in-out;
+
+  &.open {
+    left: 32em;
+  }
+}
