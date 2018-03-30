@@ -2,7 +2,9 @@ export default () => {
   const selectors = ".select-posts,.select-categories";
 
   document.querySelectorAll(selectors).forEach(element => {
-    element.addEventListener("click", () => {
+    element.addEventListener("click", e => {
+      e.preventDefault();
+
       document.querySelector(".home-page-posts").classList.toggle("hide");
       document.querySelector(".home-page-categories").classList.toggle("hide");
       document.querySelector(".select-posts").classList.toggle("active");

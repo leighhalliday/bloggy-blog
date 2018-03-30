@@ -16,7 +16,7 @@ end
 SitemapGenerator::Sitemap.create do
 
   # Posts
-  Post.listed_posts.find_each do |post|
+  Post.listed_posts.where(noindex: false).find_each do |post|
     add(post_path(post), lastmod: post.updated_at)
   end
 

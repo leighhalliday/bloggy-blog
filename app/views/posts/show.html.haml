@@ -44,7 +44,7 @@
   .container
     .row
       .col-xs-12.col-sm-2
-        %img.user-icon{:alt => @post.user.name, :src => @post.user.upload.file.url(:square_200)}/
+        %img.user-icon{alt: @post.user.name, data: {src: @post.user.upload.file.url(:square_200)}}/
 
       .col-xs-12.col-sm-6
         .category-list
@@ -65,16 +65,16 @@
         .social
           %p Reach me at
           - if @post.user.twitter.present?
-            %a.social-icon{:href => "https://twitter.com/#{@post.user.twitter}", target: "_blank"}
+            %a.social-icon{href: "https://twitter.com/#{@post.user.twitter}", target: "_blank", 'aria-label' => 'Twitter'}
               %i.fa.fa-twitter
           - if @post.user.linkedin.present?
-            %a.social-icon{:href => "https://linkedin.com/profile/view?id=#{@post.user.linkedin}", target: "_blank"}
+            %a.social-icon{href: "https://linkedin.com/profile/view?id=#{@post.user.linkedin}", target: "_blank", 'aria-label' => 'LinkedIn'}
               %i.fa.fa-linkedin
           - if @post.user.github.present?
-            %a.social-icon{:href => "https://github.com/#{@post.user.github}", target: "_blank"}
+            %a.social-icon{href: "https://github.com/#{@post.user.github}", target: "_blank", 'aria-label' => 'GitHub'}
               %i.fa.fa-github
           - if @post.user.email.present?
-            %a.social-icon{:href => "mailto:#{@post.user.email}"}
+            %a.social-icon{href: "mailto:#{@post.user.email}", 'aria-label' => 'Email'}
               %i.fa.fa-envelope
 
   .row.read-another-section
@@ -82,5 +82,5 @@
       = link_to post_path(post) do
         .col-xs-6.col-sm-4.col-md-4.col-lg-2.no-gutter.read-another-container
           .overlay
-          = image_tag post.upload.file.url(:square_800)
+          %img{data: {src: post.upload.file.url(:square_800)}, alt: post.title}/
           %h3.read-another= post.title

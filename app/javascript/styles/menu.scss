@@ -5,6 +5,11 @@ nav#menu {
   left: -32em;
   transition: left 0.3s ease-in-out;
 
+  @media (max-width: 600px) {
+    width: 75vw;
+    left: -75vw;
+  }
+
   &.open {
     left: 0px;
   }
@@ -16,5 +21,9 @@ nav#menu {
 
   &.open {
     left: 32em;
+
+    @media (max-width: 600px) {
+      left: 75vw;
+    }
   }
 }
