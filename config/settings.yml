@@ -1,105 +1,98 @@
----
-  -
-    section: "content"
-    key: "title"
-    name: "Title"
-    data_type: "string"
-    description: "Main website title."
-    default: ~
-    translatable: true
-  -
-    section: "content"
-    key: "short_desc"
-    name: "Short Description"
-    data_type: "string"
-    description: "Short description displayed on home page."
-    default: ~
-    translatable: true
-  -
-    section: "content"
-    key: "main_image"
-    name: "Main Image"
-    data_type: "image"
-    description: "Image used on home page."
-    default: ~
-    translatable: false
-  -
-    section: "content"
-    key: "footer"
-    name: "Footer"
-    data_type: "code"
-    description: "Code for the footer of the website."
-    default: ~
-    translatable: true
-  -
-    section: "code"
-    key: "header_code"
-    name: "Header Code"
-    data_type: "code"
-    description: "Code that will be injected near the end of the head tag."
-    default: ~
-    translatable: false
-  -
-    section: "code"
-    key: "footer_code"
-    name: "Footer Code"
-    data_type: "code"
-    description: "Code that will be injected just before the closing body tag."
-    default: ~
-    translatable: false
-  -
-    section: "code"
-    key: "social_share_code"
-    name: "Social Share Code"
-    data_type: "code"
-    description: "Code that will be placed anywhere that social sharing is needed."
-    default: ~
-    translatable: false
-  -
-    section: "code"
-    key: "post_footer_code"
-    name: "Post Footer Code"
-    data_type: "code"
-    description: "Code that will be rendered right below each post."
-    default: ~
-    translatable: true
-  -
-    section: "style"
-    key: "heading_font"
-    name: "Heading Font"
-    data_type: "string"
-    description: "CSS Font-Family for the header tags (h1 - h6). Please ensure you've included the font file in the Header Code setting."
-    default: ~
-    translatable: false
-  -
-    section: "style"
-    key: "body_font"
-    name: "Body Font"
-    data_type: "string"
-    description: "CSS Font-Family for the body (p) tags. Please ensure you've included the font file int he Header Code setting."
-    default: ~
-    translatable: false
-  -
-    section: "i18n"
-    key: "i18n_default_locale"
-    name: "Default Locale"
-    data_type: "string"
-    description: "The default locale that this website operates in."
-    default: "en"
-    translatable: false
-  -
-    section: "i18n"
-    key: "i18n_available_locales"
-    name: "Available Locales"
-    data_type: "string"
-    description: "A comma separated list of available languages."
-    default: "en"
-    translatable: false
-  -
-    section: "i18n"
-    key: "i18n_activated"
-    name: "I18n Activated"
-    data_type: "boolean"
-    description: "Whether or not I18n is enabled on website."
-    default: false
-    translatable: false
+- section: "content"
+  key: "title"
+  name: "Title"
+  data_type: "string"
+  description: "Main website title."
+  default: ~
+  translatable: true
+- section: "content"
+  key: "short_desc"
+  name: "Short Description"
+  data_type: "string"
+  description: "Short description displayed on home page."
+  default: ~
+  translatable: true
+- section: "content"
+  key: "main_image"
+  name: "Main Image"
+  data_type: "image"
+  description: "Image used on home page."
+  default: ~
+  translatable: false
+- section: "content"
+  key: "footer"
+  name: "Footer"
+  data_type: "code"
+  description: "Code for the footer of the website."
+  default: ~
+  translatable: true
+- section: "code"
+  key: "header_code"
+  name: "Header Code"
+  data_type: "code"
+  description: "Code that will be injected near the end of the head tag."
+  default: ~
+  translatable: false
+- section: "code"
+  key: "footer_code"
+  name: "Footer Code"
+  data_type: "code"
+  description: "Code that will be injected just before the closing body tag."
+  default: ~
+  translatable: false
+- section: "code"
+  key: "social_share_code"
+  name: "Social Share Code"
+  data_type: "code"
+  description: "Code that will be placed anywhere that social sharing is needed."
+  default: ~
+  translatable: false
+- section: "code"
+  key: "post_footer_code"
+  name: "Post Footer Code"
+  data_type: "code"
+  description: "Code that will be rendered right below each post."
+  default: ~
+  translatable: true
+- section: "style"
+  key: "heading_font"
+  name: "Heading Font"
+  data_type: "string"
+  description: "CSS Font-Family for the header tags (h1 - h6). Please ensure you've included the font file in the Header Code setting."
+  default: ~
+  translatable: false
+- section: "style"
+  key: "body_font"
+  name: "Body Font"
+  data_type: "string"
+  description: "CSS Font-Family for the body (p) tags. Please ensure you've included the font file int he Header Code setting."
+  default: ~
+  translatable: false
+- section: "i18n"
+  key: "i18n_default_locale"
+  name: "Default Locale"
+  data_type: "string"
+  description: "The default locale that this website operates in."
+  default: "en"
+  translatable: false
+- section: "i18n"
+  key: "i18n_available_locales"
+  name: "Available Locales"
+  data_type: "string"
+  description: "A comma separated list of available languages."
+  default: "en"
+  translatable: false
+- section: "i18n"
+  key: "i18n_activated"
+  name: "I18n Activated"
+  data_type: "boolean"
+  description: "Whether or not I18n is enabled on website."
+  default: false
+  translatable: false
+- section: "code"
+  key: "ad_code"
+  name: "Ad Code"
+  data_type: "code"
+  description: "Code will be injected just below social"
+  default: ~
+  translatable: false

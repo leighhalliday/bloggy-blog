@@ -22,7 +22,12 @@
         = render partial: "common/post_meta", locals: {post: @post}
         %img.user-icon.user-1{:alt => @post.user.name, :src => @post.user.upload.file.url(:square_200)}/
 
-      = Setting.get(:social_share_code).html_safe
+      = Setting.get(:social_share_code).to_s.html_safe
+
+      - if @country == 'US'
+        = render partial: "affiliate", locals: {category: @post.category}
+      - else
+        = Setting.get(:ad_code).to_s.html_safe
 
       = render partial: "source", locals: {post: @post}
 

@@ -1,15 +1,15 @@
-= gallery(@category.upload_id) do
-  - capture_haml do
-    = simple_form_for([:admin, @category]) do |f|
-      .row
-        .col-lg-6
-          = f.input :slug, label: t('admin.category.slug')
-          = f.input :name, label: t('admin.category.name')
-          = f.input :description, label: t('admin.category.description')
+= react_component("Gallery", props: {uploadId: @category.upload_id, inputSelector: '#category_upload_id'})
 
-          = f.input :upload_id, as: :hidden, input_html: {value: "{{image.id}}"}
+= simple_form_for([:admin, @category]) do |f|
+  .row
+    .col-lg-6
+      = f.input :slug, label: t('admin.category.slug')
+      = f.input :name, label: t('admin.category.name')
+      = f.input :description, label: t('admin.category.description')
 
-          = f.input :is_listed, as: :boolean, wrapper: :inline_checkbox, label: t('admin.category.is_listed')
+      = f.input :upload_id, as: :hidden, input_html: {value: "{{image.id}}"}
 
-          .actions
-            = f.submit t('admin.save'), class: "btn btn-primary"
+      = f.input :is_listed, as: :boolean, wrapper: :inline_checkbox, label: t('admin.category.is_listed')
+
+      .actions
+        = f.submit t('admin.save'), class: "btn btn-primary"
