@@ -1,6 +1,0 @@
-- if category.slug == 'frontend'
-  = render partial: "affiliate_link", locals: {url: "https://click.linksynergy.com/link?id=KQs2QrPqXeo&offerid=507388.1362070&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Freact-the-complete-guide-incl-redux%2F", title: "React 16 - The Complete Guide (incl. React Router 4 & Redux)", img_url: "https://udemy-images.udemy.com/course/480x270/1362070_b9a1_2.jpg"}
-- elsif category.slug == 'ruby-on-rails'
-  = render partial: "affiliate_link", locals: {url: "https://click.linksynergy.com/link?id=KQs2QrPqXeo&offerid=507388.1052118&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fprofessional-rails-5-development-course%2F", title: "Dissecting Ruby on Rails 5", img_url: "https://udemy-images.udemy.com/course/480x270/1052118_d5a9.jpg"}
-- else
-  = Setting.get(:ad_code).to_s.html_safe
